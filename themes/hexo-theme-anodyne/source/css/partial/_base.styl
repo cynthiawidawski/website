@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Antic|Lustria')
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6
+  font-family: 'Lustria', serif
+
+body
+  -webkit-backface-visibility: hidden;
+  font-family $main-font
+
+a:hover
+  color: darkgray
+
+.content
+  margin-bottom: 8rem
+  margin-top: 8rem
+
+.content p
+  padding-bottom: 0.5rem
+
+.content h1
+  margin-bottom: 1em;
+
+.content h2
+  padding-top: 1em;
+  margin-bottom: 0.5em
+
+.content h3
+  padding-top: 0.5em
+  margin-bottom: 0.5em
+
+.content img
+  padding-left: 10px
+  padding-right: 10px
+
+.vh-40
+  height 40vh
+
+.bg-1
+  background: url('../img/sunset.jpg') no-repeat center
+  background-size: cover
+
+.bg-2
+  background-color: #4d4d4d
+
+.banner-container
+  padding-top: 25vh
+  height: 40vh
+
+.top-bar
+  background-color: white;
+  max-width: 70%;
+  margin: 0 auto;
+
+.top-bar-right
+  font-size: 1.25em
+
+.nav-logo
+  font-family: 'Dancing Script', cursive;
+  color: rgba(0,0,0,.9)
+  font-size: 2.5em;
+
+.banner-main-text
+  font-family: Lustria, serif
+  color: white;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 1)
+
+.nav-options
+  font-family: 'Antic', sans-serif;
+  color: rgba(0,0,0,.5);
+
+.top-bar ul
+  background-color: white;
+
+.main-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+.main-nav ul li {
+  display:inline-block;
+  margin-right: 1.25em;
+}
+
+
+/* Hide Dropdowns by Default */
+.main-nav ul ul {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: white;
+    border: 1px darkgray solid;
+    padding: 10px;
+    line-height: 30px;
+    text-align: left;
+}
+
+/* Display Dropdowns on Hover */
+.main-nav ul li:hover > ul {
+    display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+.main-nav ul ul li {
+    width:170px;
+    float:none;
+    display:list-item;
+    position: relative;
+}
+.footer
+  text-align: center
+  padding: 4rem
+
+.footer a
+  color: lightgray
+
+.footer a:hover
+  color: white
+
+.footer-icon-container
+  display: inline
+  padding-left: 0.5rem
+  padding-right: 0.5rem
+
+a.footer-icon
+  font-size: 3em
+  color: white
+
+a.footer-icon:hover
+  color: darkgray
+
+
+.footer-message
+  padding-top: 4rem
+  color: white
+
+.pab-100px
+  padding-bottom 100px
+
+.w8
+  width 64rem
+
+.tj
+  text-align justify
+
+.header-icon
+  font-size 30vh
+  opacity 0.4
+  position absolute
+  bottom -3rem
+  right 6rem
+
+.text-main-color
+  color $main-color
+
+.border-color
+  border-color white
+
+.hover-border-main-color
+  transition all 0.3s cubic-bezier(.25,.8,.25,1)
+  &:hover
+    border-color $main-color
+
+.hover-text-main-color
+  transition all 0.3s cubic-bezier(.25,.8,.25,1)
+  &:hover
+    color $main-color
+
+.cursor-default {
+  cursor: default;
+}

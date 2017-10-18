@@ -1,0 +1,51 @@
+# Logo
+logo_image_source: http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg
+
+index_banner_text: "Essential Oils, Energy Therapy & Training"
+index_banner_text_secondary: ''
+index_font_awesome_icon_css: ''
+
+# Header
+menu:
+  Home: /
+  About: /about
+  Services:
+    Access Consciousness: /services/access-consciousness
+    Reiki: /services/reiki
+    Cedar Foot Soaks: /services/cedar-foot-soaks
+    Essential Oils: /services/essential-oils
+  Events: /events
+  Contact: /contact
+
+# Post
+default_post_title: Untitled
+default_post_icon: ''
+
+# Archive Date Format
+archive_date_format: MMM YYYY
+archive_font_awesome_icon_css: fa-folder-open
+
+# About Widget
+about_widget_avatar_url: http://tachyons.io/img/avatar_1.jpg
+about_widget_text: "About"
+
+
+# Comments.
+comments:
+  # Disqus comments
+  disqus_shortname: 
+
+# Google Analytics Tracking ID
+google_analytics:
+
+# Social Media Platforms
+social_platforms:
+  - url: https://www.facebook.com/CynthiaWidawskiEssentialOilsandEnergyTherapy/
+    fa_icon: fa-facebook
+  - url: mailto:cynthiawidawski@gmail.com
+    fa_icon: fa-envelope
+  - url: /#
+    fa_icon: fa-rss
+
+# Footer about
+footer_about: "&copy; 2017 <a class=\"link dim white\" href=\"mailto:cynthiawidawski@gmail.com\">Cynthia Widawski</a>"

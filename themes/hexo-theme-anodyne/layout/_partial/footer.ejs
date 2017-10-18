@@ -1,0 +1,18 @@
+<div class="bg-2 footer">
+        <div class="grid-x">
+            <div class="large-offset-2 large-8 cell">
+                <% theme.social_platforms.forEach(function(platform) { %>
+                    <div class="footer-icon-container">
+                        <a class="footer-icon" href="<%- platform.url %>" target="_blank">
+                            <i class="fa <%- platform.fa_icon %>"></i>
+                        </a>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+        <div class="footer-message grid-x">
+            <div class="large-offset-2 large-8 cell">
+              <%- theme.footer_about %>
+            </div>
+        </div>
+    </div>

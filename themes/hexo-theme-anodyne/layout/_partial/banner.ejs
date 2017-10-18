@@ -1,0 +1,54 @@
+<!-- Banner -->
+
+<div data-sticky-container>
+   <nav class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+        <div class="top-bar-left">
+          <a class="nav-logo" href="<%- config.root %>" title="<%- config.title %>">
+              <%- config.title %>
+              <!--<img src="<%- theme.logo_image_source %>" class="dib h3" alt="<%- config.title %>">-->
+          </a>
+        </div>
+
+        <div class="main-nav top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <% for (var i in theme.menu) { %>
+              <% if (typeof theme.menu[i] === 'string') { %>
+                <li><a class="link first-nav nav-options dim f4 f4-l dib mr3 mr4-l"
+                    href="<%- url_for(theme.menu[i]) %>"
+                    title="<%= i %>">
+                    <%= i %>
+                </a></li>
+              <% } else { %>
+                 <li>
+                 <a class="link first-nav nav-options dim f4 f4-l mr3 mr4-l"
+                    href="#"
+                    title="<%= i %>">
+                    <%= i %>
+                </a>
+                <ul class="menu vertical">
+                <% for (var j in theme.menu[i]) { %>
+                  <li>
+                  <a class="link second-nav nav-options dim f4 f4-l mr3 mr4-l"
+                      href="<%- url_for(theme.menu[i][j]) %>"
+                      title="<%= j %>">
+                      <%= j %>
+                  </a>
+                  </li>
+                <% } %>
+                </ul>
+              </li>
+              <% } %>
+            <% } %>
+        </div>
+    </nav>
+</div>
+
+<div class="banner-container bg-1">
+    <!-- Title -->
+    <div class="grid-x">
+        <div class="large-offset-1 large-10 cell">
+            <h1 class="banner-main-text"><%- mainText %></h1>
+            <p class=""><%- secondaryText %></p>
+        </div>
+    </div>
+</div>
