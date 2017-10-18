@@ -76,5 +76,8 @@ theme: hexo-theme-anodyne
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+
 deploy:
-  type:
+  type: git
+  repo: git@github.com:cynthiawidawski/cynthiawidawski.github.io.git
+  branch: master
