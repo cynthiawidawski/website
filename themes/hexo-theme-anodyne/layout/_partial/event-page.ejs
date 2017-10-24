@@ -1,0 +1,61 @@
+
+
+<div class="grid-x">
+  <div class="large-8 cell event-image">
+     <img src="<%- metadata.event_image %>" width="500" height="300" />
+  </div>
+
+
+  <div class="large-4 cell">
+    <%- metadata.event_date_human %>
+    <br />
+    <%- metadata.event_time %>
+    <br /><br />
+    <h1><%- metadata.title %></h1>
+    <br /><br />
+
+    <%- partial('_partial/paypal-button', {item: metadata}) %>
+  </div>
+</div>
+
+<hr />
+<br />
+
+<div class="grid-x">
+  <div class="large-8 cell event-details-container">
+   <h4>When</h4>
+    <%- metadata.event_date_human %>
+    <br />
+    <%- metadata.event_time %>
+    <br /><br />
+
+    <h4>Description</h4>
+    <%- metadata.event_short_desc %>
+    <br /><br />
+
+    <h4>Where</h4>
+    <%- metadata.event_location_name %>
+    <br />
+    <%- metadata.event_location_address %>
+    <br /><br />
+
+    <h4>Cost</h4>
+    <% for (var cost_opt in metadata.event_cost_options) { %>
+      <%- cost_opt %>: $<%- metadata.event_cost_options[cost_opt] %><br />
+    <% } %>
+    <br /><br />
+
+  </div>
+
+  <div class="large-4 cell">
+   <iframe
+      width="300"
+      height="225"
+      frameborder="0" style="border:0"
+      class="event-map-iframe"
+      src="https://www.google.com/maps/embed/v1/place
+?key=AIzaSyC8LAjtj7Yuy3i6yPBchlnfVYgHOYIweCI&q=<%- metadata.event_location_address %>" allowfullscreen></iframe>
+  </div>
+</div>
+
+<br /><br />

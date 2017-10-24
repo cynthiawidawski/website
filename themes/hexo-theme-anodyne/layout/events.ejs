@@ -1,0 +1,33 @@
+<%
+    var postList = [];
+
+    site.categories.forEach(function(item) {
+        if (item.name === 'event') {
+            postList = item.posts.slice();
+        }
+    });
+
+%>
+
+
+<!-- Banner -->
+<%- partial('_partial/banner.ejs', {
+    mainText: 'Classes & Events',
+    secondaryText: '',
+    faIconCss: ''
+}) %>
+
+<div class="grid-container">
+    <div class="content grid-x">
+        <div class="large-8 large-offset-2 cell">
+
+            <h1>Upcoming Classes & Events</h1>
+
+            <% postList.each(function(item){ %>
+                <%- partial('_partial/event-listing', {item: item}) %>
+            <% }); %>
+
+        </div>
+    </div>
+</div>
+

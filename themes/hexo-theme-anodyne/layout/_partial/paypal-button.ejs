@@ -1,0 +1,37 @@
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="cynthiawidawski@gmail.com">
+
+  <!-- Specify a Buy Now button. -->
+  <input type="hidden" name="cmd" value="_xclick">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="<%- item.title %>">
+  <input type="hidden" name="currency_code" value="CAD">
+
+  <!-- Provide a drop-down menu option field with prices. -->
+  <input type="hidden" name="on0" value="Payment Option">Payment Option <br />
+  <select name="os0">
+    <% for (var cost_opt in item.event_cost_options) { %>
+      <option value="<%- cost_opt %>"><%- cost_opt %> - $<%- item.event_cost_options[cost_opt] %></option>
+    <% } %>
+  </select> <br />
+
+  <!-- Specify the price that PayPal uses for each option. -->
+  <input type="hidden" name="option_index" value="0">
+
+  <% for (var cost_opt in item.event_cost_options) { %>
+    <% var index = Object.keys(item.event_cost_options).indexOf(cost_opt); %>
+    <input type="hidden" name="option_select<%- index %>" value="<%- cost_opt %>">
+    <input type="hidden" name="option_amount<%- index %>" value="<%- item.event_cost_options[cost_opt] %>">
+  <% } %>
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit" border="0"
+    src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png"
+    alt="Buy Now">
+  <img alt="" border="0" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+
+</form>

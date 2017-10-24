@@ -1,0 +1,12 @@
+<div class="grid-x">
+  <div class="large-4 cell">
+    <a href="<%- url_for(item.path) %>"><img src="<%- item.event_image %>" height="200" width="200" /></a>
+  </div>
+  <div class="large-8 cell">
+    <h3><a href="<%- url_for(item.path) %>"><%- item.title %></a></h3>
+    <p><%- item.event_short_desc %></p>
+    <%- item.event_date_human %><br />
+    <%- item.event_time %>
+  </div>
+</div>
+<hr />
