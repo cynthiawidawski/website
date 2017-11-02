@@ -14,6 +14,7 @@ event_short_desc: This is a short description of the event
 event_image: '/img/party.jpg'
 date_created: 2017-10-17 21:46:21
 tags:
+  - "featured"
 ---
 
 Custom content goes here

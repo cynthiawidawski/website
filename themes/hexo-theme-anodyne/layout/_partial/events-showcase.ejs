@@ -1,0 +1,15 @@
+<% if (site.tags.findOne({name: 'featured'})) { %>
+  <br /><br />
+  <h2>Featured Events</h2>
+
+  <div class="grid-x" data-equalizer data-equalize-on="large" >
+
+  <% site.tags.findOne({name: 'featured'}).posts.slice(0,3).forEach(function(post) { %>
+    <div class="large-4 cell">
+      <%- partial('_partial/event-small-listing', {item: post}) %>
+    </div>
+  <% }); %>
+
+  </div>
+
+<% } %>

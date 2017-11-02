@@ -1,0 +1,16 @@
+<div class="grid-x small-event-listing">
+  <div class="large-12 cell">
+    <h3><a href="<%- url_for(item.path) %>"><%- item.title %></a></h3>
+    <a href="<%- url_for(item.path) %>"><img src="<%- item.event_image %>" class="small-event-image" data-equalizer-watch /></a>
+    <div class="register-dt grid-x">
+      <div class="large-9 cell">
+        <%- item.event_date_human %><br />
+        <%- item.event_time %>
+      </div>
+      <div class="large-3 cell">
+        <a href="<%- url_for(item.path) %>" class="button">Register</a>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -14,6 +14,8 @@ event_short_desc: "The Bars are 32 bars of energy that run through and around yo
 event_image: '/img/access-bars.jpg'
 date_created: 2017-10-23 21:46:21
 tags:
+  - "access consciousness"
+  - "featured"
 ---
 
 Custom content goes here

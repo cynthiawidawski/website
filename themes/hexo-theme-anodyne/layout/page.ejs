@@ -9,10 +9,24 @@
 <div class="content">
     <div class="grid-container">
         <div class="grid-x">
-                <div class="large-12 cell">
+          <% if (page.type == 'service') { %>
+                <div class="large-9 main-content cell">
                     <!-- Main Post Content -->
                     <%- page.content %>
                 </div>
+                <div class="large-3 cell">
+                  <%- partial('_partial/events-sidebar', {page: page}) %>
+                </div>
+          <% } else { %>
+                <div class="large-12 cell">
+                    <!-- Main Post Content -->
+                    <%- page.content %>
+
+                    <% if ('type' in page && page.type == 'index') { %>
+                      <%- partial('_partial/events-showcase', {page: page}) %>
+                    <% } %>
+                </div>
+          <% } %>
             </div>
         </div>
     </div>

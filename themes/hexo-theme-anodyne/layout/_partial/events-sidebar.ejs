@@ -1,0 +1,13 @@
+<h3>Upcoming <%- page.title %> Events</h3>
+
+  <% if (site.tags.findOne({name: page.title.toLowerCase()})) { %>
+
+    <% site.tags.findOne({name: page.title.toLowerCase()}).posts.forEach(function(post) { %>
+        <%- partial('_partial/event-small-listing', {item: post}) %>
+        <hr>
+    <% }); %>
+
+  <% } else { %>
+    <p>None currently scheduled</p>
+  <% } %>
+

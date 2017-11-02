@@ -1,5 +1,6 @@
 ---
 title: "Essential Oils, Energy Therapy & Training"
+type: 'index'
 date: 2017-10-17 15:40:26
 ---
 
